@@ -7,6 +7,7 @@ installBrew(){
 installBrewApps(){
     brew install git
     brew install mas
+    brew install gh
     brew install --cask iterm2
     brew install --cask google-chrome
     brew install --cask postman
@@ -51,6 +52,14 @@ installAndSetupOhMyZsh(){
     source ~/.zshrc
 }
 
+setupSshKeyGithub(){
+    echo "Enter your Github email"
+    read email
+    ssh-keygen -t ed25519 -C $email
+    echo "Enter title for your SSH key"
+    read title
+    gh ssh-key add ~/.ssh/id_ed25519.pub --title $title
+}
 
 #installBrew
 #installBrewApps
