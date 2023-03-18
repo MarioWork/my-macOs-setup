@@ -46,6 +46,8 @@ installAppStoreApps(){
     mas install 441258766
     #Hand Mirror
     mas install 1502839586
+    #BitWarden
+    mas install 1352778147
 }
 
 installAndSetupOhMyZsh(){
