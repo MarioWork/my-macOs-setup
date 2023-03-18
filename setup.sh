@@ -18,6 +18,8 @@ installBrewApps(){
     brew install git
     brew install mas
     brew install gh
+    brew install node
+    brew install nvm
     brew install --cask iterm2
     brew install --cask google-chrome
     brew install --cask postman
