@@ -48,7 +48,7 @@ installAndSetupOhMyZsh(){
     echo "What is your user?"
     read user
     cp .zshrc /Users/$user
-
+    source ~/.zshrc
 }
 
 
