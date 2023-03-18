@@ -1,10 +1,20 @@
 #! /bin/sh
+#Colors
+Yellow='\033[1;33m'
+Red='\033[0;31m'
+Green='\033[0;32m'
+NoColor='\033[1;37m'
+
+
 installBrew(){
+    echo "${Yellow}Installing Brew started...${NoColor}"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew update
 }
 
 installBrewApps(){
+    echo "${Yellow}Installing Brew Apps started...${NoColor}"
+
     brew install git
     brew install mas
     brew install gh
@@ -24,6 +34,8 @@ installBrewApps(){
 }
 
 installAppStoreApps(){
+    echo "${Yellow}Installing AppStore Apps started...${NoColor}"
+
     #CopyClip
     mas install 595191960
     #ColorSlurp
@@ -37,6 +49,8 @@ installAppStoreApps(){
 }
 
 installAndSetupOhMyZsh(){
+    echo "${Yellow}Setup for Oh My Zsh started...${NoColor}"
+
     #Oh My Zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -53,6 +67,7 @@ installAndSetupOhMyZsh(){
 }
 
 setupSshKeyGithub(){
+    echo "${Yellow}Setup for Github SSH KEY started...${NoColor}"
     echo "Enter your Github email"
     read email
     ssh-keygen -t ed25519 -C $email
@@ -64,6 +79,7 @@ setupSshKeyGithub(){
 #installBrew
 #installBrewApps
 #installAppStoreApps
-installAndSetupOhMyZsh
+#installAndSetupOhMyZsh
+#setupSshKeyGithub
 
-echo "All Done! Enjoy! :)"
+echo "${Green}All Done! Enjoy! :)${NoColor}"
