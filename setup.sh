@@ -80,10 +80,10 @@ setupSshKeyGithub(){
     gh ssh-key add ~/.ssh/id_ed25519.pub --title $title
 }
 
-#installBrew
-#installBrewApps
-#installAppStoreApps
-#installAndSetupOhMyZsh
-#setupSshKeyGithub
+installBrew
+installBrewApps
+installAppStoreApps
+installAndSetupOhMyZsh
+setupSshKeyGithub
 
 echo "${Green}All Done! Enjoy! :)${NoColor}"
