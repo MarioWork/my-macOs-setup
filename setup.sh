@@ -1,12 +1,4 @@
 #! /bin/sh
-
-installBrew
-installBrewApps
-installAppStoreApps
-
-echo "All Done! Enjoy! :)"
-
-
 installBrew(){
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew update
@@ -42,3 +34,21 @@ installAppStoreApps(){
     #Hand Mirror
     mas install 1502839586
 }
+
+installAndSetupOhMyZsh(){
+   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
+    echo "What is your user?"
+    read user
+    cp .zshrc /Users/$user
+
+}
+
+
+#installBrew
+#installBrewApps
+#installAppStoreApps
+installAndSetupOhMyZsh
+
+echo "All Done! Enjoy! :)"
