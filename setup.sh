@@ -28,6 +28,7 @@ installBrewApps(){
     brew install --cask dropbox
     brew install --cask slack
     brew install --cask discord
+    brew install --cask background-music
     brew install --cask alfred
     brew install --cask spotify
     brew install --cask stats
