@@ -20,6 +20,7 @@ installBrewApps(){
     brew install gh
     brew install node
     brew install nvm
+    brew install ffmpeg
     brew install --cask iterm2
     brew install --cask google-chrome
     brew install --cask postman
