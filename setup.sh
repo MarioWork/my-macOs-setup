@@ -21,6 +21,7 @@ installBrewApps(){
     brew install node
     brew install nvm
     brew install ffmpeg
+    brew install tldr
     brew install --cask iterm2
     brew install --cask google-chrome
     brew install --cask postman
