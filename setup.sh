@@ -77,9 +77,7 @@ setupSshKeyGithub(){
     echo "Enter your Github email"
     read email
     ssh-keygen -t ed25519 -C $email
-    echo "Enter title for your SSH key"
-    read title
-    gh ssh-key add ~/.ssh/id_ed25519.pub --title $title
+    gh auto login
 }
 
 installBrew
