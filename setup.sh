@@ -68,7 +68,10 @@ installAndSetupOhMyZsh(){
 
     echo "What is your user?"
     read user
+
     cp .zshrc /Users/$user
+    cp .p10k.zsh /Users/$user
+
     source ~/.zshrc
 }
 
