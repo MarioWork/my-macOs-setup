@@ -5,6 +5,7 @@ Red='\033[0;31m'
 Green='\033[0;32m'
 NoColor='\033[1;37m'
 
+ock
 
 installBrew(){
     echo "${Yellow}Installing Brew started...${NoColor}"
@@ -82,6 +83,13 @@ setupSshKeyGithub(){
     ssh-keygen -t ed25519 -C $email
     gh auto login
 }
+
+
+#Hide Dock and Reduce delay of showing again
+defaults write com.apple.dock autohide -bool true && killall Dock
+defaults delete com.apple.dock autohide-delay  && killall Dock
+defaults write com.apple.dock no-bouncing -bool FALSE && killall Dock
+defaults write com.apple.dock autohide-time-modifier -float 0.5 && killall Dock
 
 installBrew
 installBrewApps
